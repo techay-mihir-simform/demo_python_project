@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL = 'info.User'
 
-CSRF_TRUSTED_ORIGINS = ['https://www.meetmanvar.ml']
+#CSRF_TRUSTED_ORIGINS = ['https://www.meetmanvar.ml']
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
