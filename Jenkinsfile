@@ -42,7 +42,7 @@ pipeline
               steps{
                   sh '''
                   aws ecs update-service --cluster ecscluster --service web-service1 --task-definition web-family --force-new-deployment
-                  '''
+                  ''' 
               }
           }
         
