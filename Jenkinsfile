@@ -46,6 +46,14 @@ pipeline
                   '''
               }
           }  
+        stage('Stop Existing task'){
+            steps{
+            sh '''
+            aws ecs stop-task --cluster "ecscluster" --task $(aws ecs list-tasks --cluster "ecscluster" --service "web-service1" --output text --query taskArns[0])
+            '''
+            }
+        
+        }
           stage('Update_service'){
               steps{
                   sh '''
