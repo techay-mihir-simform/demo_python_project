@@ -5,13 +5,21 @@ pipeline
         registry = "325483233520.dkr.ecr.us-east-1.amazonaws.com/repoforecr"
     }
     stages{
-        stage('Clone'){
+        stage('Checkout'){
         steps{
     
             checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/techay-mihir-simform/demo_python_project.git']]])
         
         }   
          }
+        stage('clone'){
+            steps{
+                sh '''
+                rm -rf demo_python_project
+                git clone https://github.com/techay-mihir-simform/demo_python_project.git
+                '''
+            }
+        }
         stage('Build')
         {
             steps{
