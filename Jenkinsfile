@@ -2,7 +2,7 @@ pipeline
 {
     agent any
      environment {
-        registry = "325483233520.dkr.ecr.us-east-1.amazonaws.com/repoforecr"
+        registry = "230336210248.dkr.ecr.us-east-1.amazonaws.com/repoforecr"
     }
     stages{
         stage('Checkout'){
@@ -31,8 +31,8 @@ pipeline
         stage('Push to ECR'){
             steps{
                 script {
-                sh 'docker login -u AWS -p $(aws ecr get-login-password --region us-east-1) 325483233520.dkr.ecr.us-east-1.amazonaws.com'
-                sh 'docker push 325483233520.dkr.ecr.us-east-1.amazonaws.com/repoforecr:latest'
+                sh 'docker login -u AWS -p $(aws ecr get-login-password --region us-east-1) 230336210248.dkr.ecr.us-east-1.amazonaws.com'
+                sh 'docker push 230336210248.dkr.ecr.us-east-1.amazonaws.com/repoforecr:latest'
          
          }
             }
