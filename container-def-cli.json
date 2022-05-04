@@ -3,7 +3,7 @@
         "name": "pink-slon",
         "image": "230336210248.dkr.ecr.us-east-1.amazonaws.com/repoforecr:latest",
         "cpu": 10,
-        "memory": 500,
+        "memory": 250,
         "essential": true,
         "portMappings": [
           {
